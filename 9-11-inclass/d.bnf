@@ -1,0 +1,16 @@
+<expr> ::= <if>
+  | <expr> '+' <expr>
+  | <expr> '*' <expr>
+  | '-' <expr>
+  | '(' <expr> ')'
+  | #'[0-9]+'
+
+<if> ::= 'if ' <cond> ' then ' <expr> ' else ' <expr>
+
+<cond> ::= '(' <cond> ')'
+  | <cond> '&&' <cond>
+  | <cond> '||' <cond>
+  | <expr> '>' <expr>
+  | <expr> '<' <expr>
+  | <expr> '=' <expr>
+  | '!' expr

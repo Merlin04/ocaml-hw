@@ -1,0 +1,3 @@
+<expr> ::= e | 'a' <expr> <opt_b>
+
+<opt_b> ::= e | 'b'
